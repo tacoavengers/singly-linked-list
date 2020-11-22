@@ -78,7 +78,15 @@ LL1.print_LL()
 
 ### Adding Elements to A Linked List
 
+The first order of business is to create a node. To do that we create a class Node.  Recall that we did that above.
 
+```
+class Node:
+   def __init__(self, data):
+      self.data = data
+      self.ref = None
+
+```
 
 
 
