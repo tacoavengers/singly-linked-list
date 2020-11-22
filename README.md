@@ -167,7 +167,14 @@ LL1.print_LL()
 
 ** First, we must decide if we're going to insert before an existing node or after an existing node.  There is a difference.
 
+In this example, the capital letters refer to the references of the following nodes.  10 is refering to the reference A in the node valued 20 and so forth.
 
+```
+ head      A       B       C tail
+10| A  -> 20|B -> 30|C -> 40|null
+```
+
+#### After a node
 
 
 
