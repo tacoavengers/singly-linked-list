@@ -40,7 +40,14 @@ class Node:
 node1 = Node(10)
 print(node1)
 ```
+The above information is fine, but it doesn't really help us.  It's not creating a linked list of nodes.  Only a single node.    
 
+Now to create a linked liste of nodes, we need a Linked List class
+
+```
+
+
+```
 
 
 
