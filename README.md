@@ -43,7 +43,7 @@ print(node1)
 The above information is fine, but it doesn't really help us.  It's not creating a linked list of nodes.  Only a single node.    
 
 Now to create a linked list of nodes we need a Linked List class.  In doing so, now we concern ourselves with subject of the head. After all, a list must have a head.    
-To traverse a linked list, we need to see if there's a head.  If it is, we do one action (A).  If it isn't, we do something different.
+To traverse a linked list we need to see if there's a head.  If there is, we do one action (A).  If there isn't, we do something different.
 
 ```
 class Node:
