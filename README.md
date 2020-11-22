@@ -229,7 +229,9 @@ class LinkedList:
 LL1 = LinkedList()
 LL1.add_begin(10)
 LL1.add_end(50)
+LL1.add_end(75)
 LL1.add_begin(20)
+LL1.after_node(22, 50)
 LL1.print_LL()
 
 ```
