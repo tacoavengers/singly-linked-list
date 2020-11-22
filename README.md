@@ -163,6 +163,10 @@ LL1.print_LL()
 4) Then we change the reference of the last node to the new_node.
 
 
+### Insert a new node inbetween two existing nodes
+
+** First, we must decide if we're going to insert before an existing node or after an existing node.  There is a difference.
+
 
 
 
