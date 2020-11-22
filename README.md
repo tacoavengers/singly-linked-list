@@ -42,10 +42,22 @@ print(node1)
 ```
 The above information is fine, but it doesn't really help us.  It's not creating a linked list of nodes.  Only a single node.    
 
-Now to create a linked liste of nodes, we need a Linked List class
+Now to create a linked liste of nodes we need a Linked List class.  In doing so, now we concern ourselves with subject of the head. After all, a list must have a head.  To traverse a linked list, we need to see if there's a head.  If not, we do one thing.  If there is, we do something different.
 
 ```
-
+class Node:
+   def __init__(self, data):
+      self.data = data
+      self.ref = None
+      
+class LinkedList:
+   def __init__(self):
+      self.head = None
+      
+      
+   def print_LL(self):
+      if
+   
 
 ```
 
