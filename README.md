@@ -176,5 +176,48 @@ In this example, the capital letters refer to the references of the following no
 
 #### After a node
 
+```
+class LinkedList:
+   def __init__(self):
+      self.head = None
+      
+      
+   def print_LL(self):         
+      if self.head is None:      # A
+         print("list is empty")
+      else:                      # B
+         n = self.head
+         while n is not None:
+            print(n.data)
+            n = n.ref
+            
+   def add_begin(self,data):
+      new_node = Node(data)
+      new_node.ref = self.head
+      self.head = new_node
+      
+      
+   def add_end(self, data):
+      new_node = Node(data):
+      if self.head is None:
+         self.head = new_node
+      else:
+         n = self.head
+         while n.ref is not None:
+            n = n.ref
+         n.ref = new_node
+         
+   def after_node(self, data, x):
+   
+   
+         
+LL1 = LinkedList()
+LL1.add_begin(10)
+LL1.add_end(50)
+LL1.add_begin(20)
+LL1.print_LL()
 
+```
+1) The method after_node contains an 'x' argument.  This is the node we want to insert after.
+2) 
 
