@@ -115,6 +115,39 @@ LL1.print_LL()
 
 ### Adding elements to the end of a linked list
 
+```
+class Node:
+   def __init__(self, data):
+      self.data = data
+      self.ref = None
+      
+class LinkedList:
+   def __init__(self):
+      self.head = None
+      
+      
+   def print_LL(self):         
+      if self.head is None:      # A
+         print("list is empty")
+      else:                      # B
+         n = self.head
+         while n is not None:
+            print(n.data)
+            n = n.ref
+            
+   def add_begin(self,data):
+      new_node = Node(data)
+      new_node.ref = self.head
+      self.head = new_node
+      
+      
+   def add_end(self, data):
+   
+```
+1) We grab a blank node class card and insert some data.
+2) We assign it the variable new_node
+3) 
+4) 
 
 
 
