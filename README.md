@@ -78,8 +78,6 @@ LL1.print_LL()
 
 ### Adding elements to the beginning of a linked list
 
-The first order of business is to create a node. To do that we create a class Node.  Recall that we did that above.
-
 ```
 class Node:
    def __init__(self, data):
@@ -115,7 +113,7 @@ LL1.print_LL()
 4) Since this will be the new node of the linked list, the head neds to point to the new node. Therefore, new_node = self.head.
 
 
-
+### Adding elements to the end of a linked list
 
 
 
