@@ -23,7 +23,7 @@ Each node is a unit containing a piece of data and a reference pointing to the n
 
 ##### Cons
 - The references to the next node require extra memory
-- Random access is not possible.  To access a node one must traverse through the chaine of nodes.
+- Random access is not possible.  To access a node one must traverse through the chain of nodes.
 
 
 ### Create a Linked List
