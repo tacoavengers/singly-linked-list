@@ -208,7 +208,17 @@ class LinkedList:
          n.ref = new_node
          
    def after_node(self, data, x):
-   
+      n = self.head
+      while n is not None:
+         if x == n.data:
+            break
+         n = n.ref
+      if n is None:
+         print("node is not present")
+      else:
+         new_node = Node(data)
+         new_node.ref = n.ref
+         n.ref = new_node
    
          
 LL1 = LinkedList()
@@ -219,5 +229,6 @@ LL1.print_LL()
 
 ```
 1) The method after_node contains an 'x' argument.  This is the node we want to insert after.
-2) 
+2) We start at the head node and traverse our way through the linked list looking for 'x'.
+3) We search for n.data == x.  We move through the list referencing the next node via n.ref 
 
