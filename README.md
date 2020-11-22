@@ -109,9 +109,11 @@ LL1 = LinkedList()
 LL1.add_begin(10)
 LL1.print_LL()
 ```
-Next, when we submit the first node, it will become the head.  So we need to make sure it is referred to as the head of the list.  We can do this by storing the new-node.ref = head. 
+1) We grab a blank node class card and insert some data.
+2) We assign it the variable new_node
+3) The new node must have a reference to the head. That is why we have new_node.ref = self.head.
+4) Since this will be the new node of the linked list, the head neds to point to the new node. Therefore, new_node = self.head.
 
-Next, the reference of the new node will be stored in the head. 
 
 
 
