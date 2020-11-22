@@ -48,7 +48,7 @@ Now to create a linked list of nodes we need a Linked List class.  In doing so, 
 
 A) If there is no head, we print out a statement indicating that.    
    
-B) If the head isn't empty, we need to go through the nodes. In this case, we assign self.head to a variable 'n'. We traverse through the linked list. Notice how n.data is referring to the data value in the node, and n.ref is referring to the reference to the next node.  This will continue until the end of the list is reached.    
+B) If the head isn't empty, we need to go through the nodes. In this case, we assign self.head to a variable 'n'. We traverse through the linked list. Notice how ```n.data``` is referring to the data value in the node, and ```n.ref``` is referring to the reference to the next node.  This will continue until the end of the list is reached.    
 
 This will print "list is empty" since there is no node head.
 
