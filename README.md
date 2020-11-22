@@ -76,7 +76,7 @@ LL1 = LinkedList()
 LL1.print_LL()
 ```
 
-### Adding Elements to A Linked List
+### Adding elements to the beginning of a linked list
 
 The first order of business is to create a node. To do that we create a class Node.  Recall that we did that above.
 
@@ -85,9 +85,33 @@ class Node:
    def __init__(self, data):
       self.data = data
       self.ref = None
-
+      
+class LinkedList:
+   def __init__(self):
+      self.head = None
+      
+      
+   def print_LL(self):         
+      if self.head is None:      # A
+         print("list is empty")
+      else:                      # B
+         n = self.head
+         while n is not None:
+            print(n.data)
+            n = n.ref
+            
+   def add_begin(self,data):
+      new_node = Node(data)
+      new_node.ref = self.head
+      self.head = new_node
+      
+LL1 = LinkedList()
+LL1.add_begin(10)
+LL1.print_LL()
 ```
+Next, when we submit the first node, it will become the head.  So we need to make sure it is referred to as the head of the list.  We can do this by storing the new-node.ref = head. 
 
+Next, the reference of the new node will be stored in the head. 
 
 
 
