@@ -28,3 +28,12 @@ Each node is a unit containing a piece of data and a reference pointing to the n
 
 ### Create a Linked List
 
+
+Think of the Class Node as a card.  It's a blank waiting for information.  It'll take in a piece of data, but does not have a ref because it doesn't know yet if it's pointing to another node.
+```
+Class Node:
+   def __init__(self, data):
+      self.data = data
+      slef.ref = None
+   
+```
