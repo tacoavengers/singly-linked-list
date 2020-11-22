@@ -44,7 +44,7 @@ The above information is fine, but it doesn't really help us.  It's not creating
 
 Now to create a linked list of nodes we need a Linked List class.  In doing so, now we concern ourselves with subject of the head. After all, a list must have a head.   
 
-To traverse a linked list we need to see if there's a head.    
+#### To traverse a linked list we need to see if there's a head.    
 
 A) If there is no head, we print out a statement indicating that.    
    
