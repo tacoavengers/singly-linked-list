@@ -46,11 +46,9 @@ Now to create a linked list of nodes we need a Linked List class.  In doing so, 
 
 To traverse a linked list we need to see if there's a head.    
 
-If there is, we do one action (A).     
-   If there is no head, we print out a statement indicating that.    
+A) If there is no head, we print out a statement indicating that.    
    
-
-If there isn't, we do something different (B).
+B) If the head isn't empty, we need to go through the nodes. In this case, we assign self.head to a variable 'n'. We traverse through the linked list. Notice how n.data is referring to the data value in the node, and n.ref is referring to the reference to the next node.  This will continue until the end of the list is reached.
 
 ```
 class Node:
@@ -68,6 +66,11 @@ class LinkedList:
          print("list is empty")
       else:                      // B
          n = self.head
+         while n is not None:
+            print(n.data)
+            n = n.ref
+            
+            
    
 
 ```
