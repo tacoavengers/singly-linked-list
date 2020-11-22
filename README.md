@@ -238,11 +238,23 @@ LL1.print_LL()
 ** data is the node value we're searching for, and x is the value we want to insert
 
 1) We assign n to self.head
-2) The while loop checks while n is not None.  So if n.data is the value of x we plugged in, then we break.
+2) The loop checks while n is not None.  So if n.data is the value of x we plugged in, then we break. We found it.
 3) Otherwise, we increment to the next reference via n = n.ref.  We go through the while loop again, etc.
 4) If n is none, we print out that it is not present in the list.
 5) Otherwise, we found the x and create a new code card and place it in the proper location in the list
-5) 
+5) Remember that new nodes are not pointing to anything.
+6) We have to get the reference from the node we searched for and put it in the new_node reference.
+Suppose this is the before picture
+```
+ head      A        B tail
+10| A  -> 20|B ->  40|null
+```
+and this is the after picture
+```
+ head      A       B       C tail
+10| A  -> 20|B -> 30|C -> 40|null
+```
+We inserted 30 after 20.  We need to get the reference from 20
 
 
 
