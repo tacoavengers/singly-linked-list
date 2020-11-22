@@ -44,7 +44,13 @@ The above information is fine, but it doesn't really help us.  It's not creating
 
 Now to create a linked list of nodes we need a Linked List class.  In doing so, now we concern ourselves with subject of the head. After all, a list must have a head.   
 
-To traverse a linked list we need to see if there's a head.  If there is, we do one action (A).  If there isn't, we do something different.
+To traverse a linked list we need to see if there's a head.    
+
+If there is, we do one action (A).     
+   If there is no head, we print out a statement indicating that.    
+   
+
+If there isn't, we do something different (B).
 
 ```
 class Node:
@@ -60,7 +66,7 @@ class LinkedList:
    def print_LL(self):         
       if self.head is None:      // A
          print("list is empty")
-      else:
+      else:                      // B
          n = self.head
    
 
