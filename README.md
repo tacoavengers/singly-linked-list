@@ -233,7 +233,9 @@ LL1.add_begin(20)
 LL1.print_LL()
 
 ```
-1) The method after_node contains an 'x' argument.  This is the node we want to insert after.
-2) We start at the head node and traverse our way through the linked list looking for 'x'.
-3) We search for n.data == x.  We move through the list referencing the next node via n.ref 
+1) As usual we assign self.head to n and run through a loop.   While head is not none, we continue.
+2) While in the loop, if x == n.data, then we found our x and we can break.
+3) If the data is not the first node, then we need to assign the n value to n.ref. This moves us to the next node, and we continue with the while loop until x == n.data.
+4) If n is none, then we print out that the node is not present.
+5) 
 
