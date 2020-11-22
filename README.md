@@ -142,12 +142,20 @@ class LinkedList:
       
       
    def add_end(self, data):
+      new_node = Node(data):
+      if self.head is None:
+         self.head = new_node
+      else:
+         n = self.head
+         while n.ref is not None:
+            n = n.ref
+         n.ref = new_node
    
 ```
 1) We grab a blank node class card and insert some data.
-2) We assign it the variable new_node
-3) 
-4) 
+2) We check to make sure there's a head.  If there isn't, we make this addition the new head.  If not, we move forward.
+3) Next, we have a while loop searching until it gets to the last node.
+4) Then, we
 
 
 
