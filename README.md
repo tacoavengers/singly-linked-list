@@ -34,6 +34,25 @@ Think of the Class Node as a card.  It's a blank waiting for information.  It'll
 Class Node:
    def __init__(self, data):
       self.data = data
-      slef.ref = None
+      self.ref = None
    
 ```
+
+```
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
