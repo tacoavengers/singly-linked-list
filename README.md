@@ -150,12 +150,17 @@ class LinkedList:
          while n.ref is not None:
             n = n.ref
          n.ref = new_node
-   
+         
+LL1 = LinkedList()
+LL1.add_begin(10)
+LL1.add_end(50)
+LL1.add_begin(20)
+LL1.print_LL()
 ```
 1) We grab a blank node class card and insert some data.
 2) We check to make sure there's a head.  If there isn't, we make this addition the new head.  If not, we move forward.
 3) Next, we have a while loop searching until it gets to the last node.
-4) Then, we
+4) Then we change the reference of the last node to the new_node.
 
 
 
