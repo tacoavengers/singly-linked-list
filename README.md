@@ -48,7 +48,9 @@ To traverse a linked list we need to see if there's a head.
 
 A) If there is no head, we print out a statement indicating that.    
    
-B) If the head isn't empty, we need to go through the nodes. In this case, we assign self.head to a variable 'n'. We traverse through the linked list. Notice how n.data is referring to the data value in the node, and n.ref is referring to the reference to the next node.  This will continue until the end of the list is reached.
+B) If the head isn't empty, we need to go through the nodes. In this case, we assign self.head to a variable 'n'. We traverse through the linked list. Notice how n.data is referring to the data value in the node, and n.ref is referring to the reference to the next node.  This will continue until the end of the list is reached.    
+
+This will print "list is empty" since there is no node head.
 
 ```
 class Node:
@@ -62,17 +64,16 @@ class LinkedList:
       
       
    def print_LL(self):         
-      if self.head is None:      // A
+      if self.head is None:      # A
          print("list is empty")
-      else:                      // B
+      else:                      # B
          n = self.head
          while n is not None:
             print(n.data)
             n = n.ref
             
-            
-   
-
+LL1 = LinkedList()
+LL1.print_LL()
 ```
 
 
