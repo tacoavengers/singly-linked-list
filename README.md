@@ -30,7 +30,7 @@ Each node is a unit containing a piece of data and a reference pointing to the n
 
 
 Think of the ```class Node``` as a card.  It's a blank waiting for information.  It'll take in a piece of data, but does not have a ref because it doesn't know yet if it's pointing to another node.  Running this code will create a node named node1 and assign it to a space in memory.
-https://repl.it/@webdevdave/TrustworthyTechnicalProcedure#main.py
+https://repl.it/@webdevdave/Singly-Linked-List
 ```
 class Node:
    def __init__(self, data):
@@ -331,9 +331,6 @@ class LinkedList:
          n.ref = new_node
       
          
-      
-   
-         
 LL1 = LinkedList()
 LL1.add_begin(10)
 LL1.add_before(20, 10)
@@ -343,5 +340,117 @@ LL1.print_LL()
 1) If there is no head, print out that there is no head.
 2) If data matches x at the head node, then we create a new node, replace the head, and move the previous head node down the chain.
 
+#### Delete a node
 
+```
+class Node:
+   def __init__(self, data):
+      self.data = data
+      self.ref = None
+      
+class LinkedList:
+   def __init__(self):
+      self.head = None
+      
+      
+   def print_LL(self):         
+      if self.head is None:     
+         print("list is empty")
+      else:                    
+         n = self.head
+         while n is not None:
+            print(n.data)
+            n = n.ref
+            
+   def add_begin(self,data):
+      new_node = Node(data)
+      new_node.ref = self.head
+      self.head = new_node
+      
+      
+   def add_end(self, data):
+      new_node = Node(data)
+      if self.head is None:
+         self.head = new_node
+      else:
+         n = self.head
+         while n.ref is not None:
+            n = n.ref
+         n.ref = new_node
+         
+   def after_node(self, data, x):
+      n = self.head
+      while n is not None:
+         if x == n.data:
+            break
+         n = n.ref
+      if n is None:
+         print("node is not present")
+      else:
+         new_node = Node(data)
+         new_node.ref = n.ref
+         n.ref = new_node
+         
+   def add_before(self, data, x):
+      if self.head is None:            # 1
+         print("Linked list is empty")
+      if self.head.data == x:          # 2
+         new_node = Node(data)
+         new_node.ref = self.head
+         self.head = new_node
+         return
+      n = self.head
+      while n.ref is not None:
+         if n.ref.data == x:
+            break                      # the purpose is just to find the ref for the data that matches x
+         n = n.ref                     # otherwise continue through the loop
+      if n.ref is None:
+         print("could not find node")
+      else:
+         new_node = Node(data)
+         new_node.ref = n.ref
+         n.ref = new_node
+         
+         
+         
+   def delete_begin(self):
+      if self.head is None:
+         print("There are no nodes to delete")
+      else:
+         self.head = self.head.ref
+      
+   def delte_end(self):
+      if self.head is None:
+         print("The list is empty.  There's nothing to delete")
+      else:
+         n = self.head.ref
+         while n.ref.ref is not None:
+            n = n.ref
+         n.ref = None
+         
+   def delete_by_value(self, x):
+      if self.head is None:
+         print("List is empty. Nothing to delete")
+         return
+      if x == self.head.data:
+         self.head = self.head.ref
+         return
+      n = self.head
+      while n.ref is not None:
+         if x == n.ref.data:
+            break
+         n = n.ref
+      if n.ref is None:
+         print("Node is not here")
+      else:
+         n.ref = n.ref.ref
+      
+         
+LL1 = LinkedList()
+LL1.add_begin(10)
+LL1.add_begin(20)
+LL1.add_begin(30)
+LL1.delete_by_value(10)
+LL1.print_LL()
 
+```
