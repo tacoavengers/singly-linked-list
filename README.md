@@ -90,9 +90,9 @@ class LinkedList:
       
       
    def print_LL(self):         
-      if self.head is None:      # A
+      if self.head is None:     
          print("list is empty")
-      else:                      # B
+      else:                      
          n = self.head
          while n is not None:
             print(n.data)
@@ -127,9 +127,9 @@ class LinkedList:
       
       
    def print_LL(self):         
-      if self.head is None:      # A
+      if self.head is None:      
          print("list is empty")
-      else:                      # B
+      else:                      
          n = self.head
          while n is not None:
             print(n.data)
@@ -188,9 +188,9 @@ class LinkedList:
       
       
    def print_LL(self):         
-      if self.head is None:      # A
+      if self.head is None:     
          print("list is empty")
-      else:                      # B
+      else:                     
          n = self.head
          while n is not None:
             print(n.data)
@@ -261,7 +261,77 @@ We inserted 30 after 20.  We need to get the reference from 20.  20 used to poin
 
 ** We must consider the possibility that a new node could be inserted before the head node.
 
+```
+class Node:
+   def __init__(self, data):
+      self.data = data
+      self.ref = None
+      
+class LinkedList:
+   def __init__(self):
+      self.head = None
+      
+      
+   def print_LL(self):         
+      if self.head is None:     
+         print("list is empty")
+      else:                    
+         n = self.head
+         while n is not None:
+            print(n.data)
+            n = n.ref
+            
+   def add_begin(self,data):
+      new_node = Node(data)
+      new_node.ref = self.head
+      self.head = new_node
+      
+      
+   def add_end(self, data):
+      new_node = Node(data)
+      if self.head is None:
+         self.head = new_node
+      else:
+         n = self.head
+         while n.ref is not None:
+            n = n.ref
+         n.ref = new_node
+         
+   def after_node(self, data, x):
+      n = self.head
+      while n is not None:
+         if x == n.data:
+            break
+         n = n.ref
+      if n is None:
+         print("node is not present")
+      else:
+         new_node = Node(data)
+         new_node.ref = n.ref
+         n.ref = new_node
+         
+   def add_before(self, data, x):
+      if self.head is None:            # 1
+         print("Linked list is empty")
+      if self.head.data == x:          # 2
+         new_node = Node(data)
+         new_node.ref = self.head
+         self.head = new_node
+         return
+      
+   
+         
+LL1 = LinkedList()
+LL1.add_begin(10)
+LL1.add_end(50)
+LL1.add_end(75)
+LL1.add_begin(20)
+LL1.after_node(22, 50)
+LL1.print_LL()
 
+```
+1) If there is no head, print out that there is no head.
+2) If data matches x at the head node, then we create a new node, replace the head, and move the previous head node down the chain.
 
 
 
