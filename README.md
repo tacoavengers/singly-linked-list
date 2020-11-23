@@ -318,15 +318,25 @@ class LinkedList:
          new_node.ref = self.head
          self.head = new_node
          return
+      n = self.head
+      while n.ref is not None:
+         if n.ref.data == x:
+            break                      # the purpose is just to find the ref for the data that matches x
+         n = n.ref                     # otherwise continue through the loop
+      if n.ref is None:
+         print("could not find node")
+      else:
+         new_node = Node(data)
+         new_node.ref = n.ref
+         n.ref = new_node
+      
+         
       
    
          
 LL1 = LinkedList()
 LL1.add_begin(10)
-LL1.add_end(50)
-LL1.add_end(75)
-LL1.add_begin(20)
-LL1.after_node(22, 50)
+LL1.add_before(20, 10)
 LL1.print_LL()
 
 ```
