@@ -254,7 +254,14 @@ and this is the after picture
  head      A       B       C tail
 10| A  -> 20|B -> 30|C -> 40|null
 ```
-We inserted 30 after 20.  We need to get the reference from 20.  20 used to point to 40, not it's pointing 30. 
+We inserted 30 after 20.  We need to get the reference from 20.  20 used to point to 40, now it's pointing 30. 
+
+
+#### Before a node
+
+** We must consider the possibility that a new node could be inserted before the head node.
+
+
 
 
 
