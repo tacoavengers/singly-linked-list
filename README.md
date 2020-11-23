@@ -110,7 +110,7 @@ LL1.print_LL()
 1) We grab a blank node class card and insert some data.
 2) We assign it the variable new_node
 3) The new node must have a reference to the head. That is why we have new_node.ref = self.head.
-4) Since this will be the new node of the linked list, the head neds to point to the new node. Therefore, new_node = self.head.
+4) Since this will be the new node of the linked list, the head needs to point to the new node. Therefore, new_node = self.head.
 
 
 ### Adding elements to the end of a linked list
