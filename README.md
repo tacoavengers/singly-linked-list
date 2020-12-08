@@ -77,7 +77,7 @@ LL1.print_LL()
 ```
 
 ### Adding elements to the beginning of a linked list
-https://repl.it/@webdevdave/Add-Element-To-Beginning-of-Linked-List#main.py
+https://repl.it/@webdevdave/Python-Add-Element-To-Beginning-of-Linked-List
 
 ```
 class Node:
