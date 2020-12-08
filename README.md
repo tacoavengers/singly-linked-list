@@ -396,9 +396,9 @@ class LinkedList:
          n.ref = new_node
          
    def add_before(self, data, x):
-      if self.head is None:            # 1
+      if self.head is None:           
          print("Linked list is empty")
-      if self.head.data == x:          # 2
+      if self.head.data == x:          
          new_node = Node(data)
          new_node.ref = self.head
          self.head = new_node
