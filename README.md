@@ -77,6 +77,7 @@ LL1.print_LL()
 ```
 
 ### Adding elements to the beginning of a linked list
+https://repl.it/@webdevdave/Add-Element-To-Beginning-of-Linked-List#main.py
 
 ```
 class Node:
@@ -114,7 +115,7 @@ LL1.print_LL()
 
 
 ### Adding elements to the end of a linked list
-
+https://repl.it/@webdevdave/Python-Add-Element-to-End-of-Linked-List#main.py
 ```
 class Node:
    def __init__(self, data):
@@ -142,7 +143,7 @@ class LinkedList:
       
       
    def add_end(self, data):
-      new_node = Node(data):
+      new_node = Node(data)
       if self.head is None:
          self.head = new_node
       else:
